@@ -1,0 +1,233 @@
+var questions = {
+    "text": "Which Academic Degree are you Pursuing? ",
+    "choices": [
+        {
+            "label": "Graduation",
+            "path": 1,
+            "question": {
+                "text": "Which Degree You're Pursuing?", 
+                "choices": [
+                    {
+                        "label": "B.Com",
+                        "path": 11,
+                        "course": "https://skill-edge.com/finance-edge/",
+                    },
+                    {
+                        "label": "BCA",
+                        "path": 12,
+                        "question": {
+                            "text": "Select Job Role You're Interested in",
+                            "choices": [
+                                {
+                                    "label": "Web Development",
+                                    "path": 121,
+                                    "course": "https://skill-edge.com/", //Add Full Stack Development 
+                                },
+                                {
+                                    "label": "Data Analyst",
+                                    "path": 122,
+                                    "course": "https://skill-edge.com/analytics-edge/",
+                                },
+                            ]
+                        }
+                    },
+                    {
+                        "label": "BA",
+                        "path": 13,
+                        "question": {
+                            "text": "Choose",
+                            "choices": [
+                                {
+                                    "label": "Basic",
+                                    "path": 131,
+                                    "course": "https://skill-edge.com/domain-specific-courses/#basic",
+                                },
+                                {
+                                    "label": "Advanced",
+                                    "path": 132,
+                                    "course": "https://skill-edge.com/", //Add Digital edge and retail edge course link
+                                },
+                            ]
+                        }
+                    },
+                ]
+            }
+        },
+        {
+            "label": "Engineer",
+            "path": 2,
+            "question": {
+                "text": "Choose Any",
+                "choices": [
+                    {
+                        "label": "Job",
+                        "path": 21,
+                        "question": {
+                            "text": "Which Job Roles Are you Looking For?",
+                            "choices": [
+                                {
+                                    "label": "Specialization",
+                                    "path": 211,
+                                    "question": {
+                                        "text": "Choose Your Engineering Branch",
+                                        "choices": [
+                                            {
+                                                "label": "Computer Science/Information Technology",
+                                                "path": 2111,
+                                                "question": {
+                                                    "text": "Rate Your Programming Skills",
+                                                    "choices": [
+                                                        {
+                                                            "label": "0-3",
+                                                            "path": 21111,
+                                                            "course": "https://skill-edge.com/course/analytics-edge/",
+                                                        },
+                                                        {
+                                                            "label": "4-6",
+                                                            "path": 21112,
+                                                            "course": "https://skill-edge.com/course/analytics-edge/",
+                                                        },
+                                                        {
+                                                            "label": "7-10",
+                                                            "path": 21113,
+                                                            "course": "https://skill-edge.com/", //Add Full Stack Development course link
+                                                        },
+                                                    ]
+                                                },
+                                            },
+                                            {
+                                                "label": "Electronics & Tele-Communication",
+                                                "path": 2112,
+                                                "question": {
+                                                    "text": "Rate Your Programming Skills",
+                                                    "choices": [
+                                                        {
+                                                            "label": "0-3",
+                                                            "path": 21121,
+                                                            "course": "https://skill-edge.com/course/analytics-edge/", // Add two courses Analaytics Edge and Mechatronics Edge(https://skill-edge.com/mechatronics-edge/)
+                                                        },
+                                                        {
+                                                            "label": "4-6",
+                                                            "path": 21122,
+                                                            "course": "https://skill-edge.com/course/analytics-edge/", // Add two courses Analaytics Edge and Mechatronics Edge(https://skill-edge.com/mechatronics-edge/)
+                                                        },
+                                                        {
+                                                            "label": "7-10",
+                                                            "path": 21123,
+                                                            "course": "https://skill-edge.com/", //Add Full Stack Development course link
+                                                        },
+                                                    ]
+                                                },
+                                            },
+                                            {
+                                                "label": "Mechanical/ Electrical/ Chemical Engineering",
+                                                "path": 2113,
+                                                "course": "https://skill-edge.com/mechatronics-edge/",
+                                            },
+                                            {
+                                                "label": "Civil Engineering",
+                                                "path": 2114,
+                                                "course": "https://skill-edge.com/excel-edge/", // Add two courses Excel Edge and Soft Skill Edge(https://skill-edge.com/soft-skill-edge/)
+                                            },
+                                        ]
+                                    }
+                                },
+                            ]
+                        }
+                    },
+                    {
+                        "label": "Entrepreneurship",
+                        "path": 22,
+                        "course": "", //Add Business Foundation & Entrepreneurship Edge 
+                    },
+                ]
+            }
+        },
+        {
+            "label": "Post Graduation",
+            "path": 3,
+            "question": {
+                "text": "Which Degree you are Pursuing?", //1 a
+                "choices": [
+                    {
+                        "label": "M.Com",
+                        "path": 31,
+                        "course": "https://skill-edge.com/finance-edge/",
+                    },
+                    {
+                        "label": "MCA/ ME(CS/ IT)",
+                        "path": 32,
+                        "question": {
+                            "text": "Select Job Roles You're Interested in", //1 a
+                            "choices": [
+                                {
+                                    "label": "Web Development",
+                                    "path": 321,
+                                    "course": "https://skill-edge.com/", //Add Full Stack Development 
+                                },
+                                {
+                                    "label": "Data Analyst",
+                                    "path": 322,
+                                    "course": "https://skill-edge.com/analytics-edge/",
+                                },
+                            ]
+                        }
+                    },
+                    {
+                        "label": "MBA/ PGDM",
+                        "path": 33,
+                        "question": {
+                            "text": "Choose Your Specialization", //1 a
+                            "choices": [
+                                {
+                                    "label": "Finance",
+                                    "path": 331,
+                                    "course": "https://skill-edge.com/finance-edge/",
+                                },
+                                {
+                                    "label": "HR",
+                                    "path": 332,
+                                    "course": "https://skill-edge.com/analytics-edge/", // Add two courses Analytics Edge and Excel Edge(https://skill-edge.com/excel-edge/)
+                                },
+                                {
+                                    "label": "Operations",
+                                    "path": 333,
+                                    "course": "https://skill-edge.com/analytics-edge/", // Add two courses Analytics Edge and Excel Edge(https://skill-edge.com/excel-edge/)
+                                },
+                                {
+                                    "label": "Marketing",
+                                    "path": 334,
+                                    "course": "https://skill-edge.com/digital-edge/", // Add three courses Digital Edge, Excel Edge(https://skill-edge.com/excel-edge/) and Retail Edge(https://skill-edge.com/retail-edge/)
+                                },
+                                {
+                                    "label": "BA",
+                                    "path": 335,
+                                    "course": "https://skill-edge.com/analytics-edge/",
+                                },
+                            ]
+                        }
+                    },
+                ]
+            }
+        },
+        {
+            "label": "Diploma",
+            "path": 4,
+            "question": {
+                "text": "Choose Your Specialization", //1 b
+                "choices": [
+                    {
+                        "label": "ENTC/ Mechanical/ Electrical/ Chemical",
+                        "path": 41,
+                        "course": "https://skill-edge.com/mechatronics-edge/",
+                    },
+                    {
+                        "label": "CS/ IT/ ENTC", //Same specialization
+                        "path": 42,
+                        "course": "https://skill-edge.com/analytics-edge/",
+                    },
+                ]
+            }
+        }
+    ]
+};
