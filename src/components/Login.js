@@ -7,8 +7,8 @@ import UserContext from './UserContext';
 
 function Login(props) {
 
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [email, setEmail] = useState('eve.holt@reqres.in');
+    const [password, setPassword] = useState('cityslicka');
     const UseContext = useContext(UserContext);
 
     const handleEmail= (e) => {
@@ -48,7 +48,7 @@ function Login(props) {
                 console.log(response);
                 localStorage.setItem("userToken", response.data.token)
                 UseContext.setUser({"userToken": response.data.token})
-                
+                //window.location.reload();
 
             })
             .catch((error) => {
@@ -77,7 +77,7 @@ function Login(props) {
                                         className="form-control"
                                         id="email"
                                         aria-describedby="emailHelp"
-                                        placeholder="Enter email"
+                                        placeholder="eg. eve.holt@reqres.in"
                                         value={email}
                                         onChange={handleEmail}
                                     />
@@ -87,7 +87,7 @@ function Login(props) {
                                     <input type="password"
                                         className="form-control"
                                         id="password"
-                                        placeholder="Password"
+                                        placeholder="eg. cityslicka"
                                         value={password}
                                         onChange={handlePassword}
                                     />

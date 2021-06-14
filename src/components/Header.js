@@ -7,6 +7,7 @@ const Header = (props) => {
   const UseContext = useContext(UserContext)
 
   const renderButton = () => {
+    
     if (UseContext.user.userToken) {
       return <Button href="/">Logout</Button>
     }
