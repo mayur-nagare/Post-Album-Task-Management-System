@@ -1,9 +1,10 @@
 import React, { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
-import { Envelope, Person, Telephone, GeoAlt, Building, Globe2 } from 'react-bootstrap-icons';
+import { Envelope, Person, Telephone, GeoAlt, Building, Globe2, ArrowLeftCircle } from 'react-bootstrap-icons';
 import Tabs from './Tabs';
-import { useHistory, useParams } from 'react-router-dom';
+import { useHistory, useParams, Redirect } from 'react-router-dom';
 import UserContext from './UserContext';
+import "../styles/backbutton.css";
 
 const Profile = (props) => {
     const history = useHistory();
@@ -38,6 +39,9 @@ const Profile = (props) => {
 
         return (
             <>
+                <div className= "backBut" onClick={() =>  history.goBack()}>
+                    <span className="text"><ArrowLeftCircle style={{ fontSize: 24, marginRight: 10 }}/>Go Back</span>
+                </div>
                 <div className="card bg-light">
                     <div className="card-body text-center">
                         <h3 className="card-title">{name}</h3>

@@ -3,7 +3,9 @@ import axios from 'axios';
 import { useHistory, useParams } from 'react-router-dom';
 import { Image, ImageGroup } from 'react-fullscreen-image';
 import "../styles/album.css"
-import UserContext from './UserContext';    
+import UserContext from './UserContext';
+import "../styles/backbutton.css";
+import { ArrowLeftCircle } from 'react-bootstrap-icons';  
 const SingleAlbum = (props) => {
     const { id, albumid } = useParams();
 
@@ -31,6 +33,10 @@ const SingleAlbum = (props) => {
     }, []);
 
     return (
+        <>
+        <div className= "backBut" style={{ marginTop: 20}} onClick={() =>  history.goBack()}>
+            <span className="text"><ArrowLeftCircle style={{ fontSize: 24, marginRight: 10 }}/>Go Back</span>
+        </div>
         <div className="container-images">
             <ImageGroup>
                 <ul className="images">
@@ -45,6 +51,7 @@ const SingleAlbum = (props) => {
                 </ul>
             </ImageGroup>
         </div>
+        </>
     )
 }
 

@@ -32,7 +32,7 @@ function PostList({id}) {
 
     return (
         <div>
-
+            
             <div className="list-group text-left">
                 {postList.map(post =>
                     <a onClick={() =>{

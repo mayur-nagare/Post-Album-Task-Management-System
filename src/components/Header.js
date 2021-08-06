@@ -8,8 +8,8 @@ const Header = (props) => {
 
   const renderButton = () => {
     
-    if (UseContext.user.userToken) {
-      return <Button href="/">Logout</Button>
+    if (UseContext.user.userToken || localStorage.getItem("userToken")) {
+      return <Button href="/" onClick={() => localStorage.removeItem("userToken")}>Logout</Button>
     }
   }
 

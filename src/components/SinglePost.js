@@ -4,6 +4,8 @@ import { useHistory, useParams } from 'react-router-dom';
 import '../styles/comments.css';
 import { Collapse } from 'reactstrap'
 import UserContext from './UserContext';
+import "../styles/backbutton.css";
+import { ArrowLeftCircle } from 'react-bootstrap-icons';
 
 const SinglePost = (props) => {
     const { postid } = useParams();
@@ -61,6 +63,9 @@ const SinglePost = (props) => {
 
         return (
             <div>
+                <div className= "backBut" onClick={() =>  history.goBack()}>
+                    <span className="text"><ArrowLeftCircle style={{ fontSize: 24, marginRight: 10 }}/>Go Back</span>
+                </div>
                 <div className="card bg-light border-primary text-left">
                     <div className="card-header">User: {userId}</div>
                     <div className="card-body text-primary">

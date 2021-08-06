@@ -1,11 +1,12 @@
 
 import React, { useState, useContext } from 'react';
 import axios from 'axios';
-import { withRouter } from "react-router-dom";
+import { withRouter, useHistory } from "react-router-dom";
 import UserContext from './UserContext';
 
 
 function Login(props) {
+    const history = useHistory();
 
     const [email, setEmail] = useState('eve.holt@reqres.in');
     const [password, setPassword] = useState('cityslicka');
@@ -43,11 +44,11 @@ function Login(props) {
 
         axios.post("https://reqres.in/api/login", {email, password})
             .then((response) => {
-                redirectToHome();
                 props.showError(null)
                 console.log(response);
                 localStorage.setItem("userToken", response.data.token)
                 UseContext.setUser({"userToken": response.data.token})
+                redirectToHome();
                 //window.location.reload();
 
             })
@@ -60,7 +61,7 @@ function Login(props) {
 
     const redirectToHome = () => {
         props.updateTitle('Logout');
-        props.history.push('/home');
+        history.push('/home');
     }
 
     return (

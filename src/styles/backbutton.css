@@ -1,0 +1,14 @@
+.backBut{
+    align-items: center;
+    text-align: left;
+    margin-left: 20px;
+    justify-content: start;
+    display: flex;
+}
+span.text{
+    display: flex
+}
+span.text:hover{
+    transform: scale(1.1);
+    color: #3385ff;
+}

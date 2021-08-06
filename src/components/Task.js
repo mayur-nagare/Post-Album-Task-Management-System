@@ -1,8 +1,9 @@
 import React, { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
 import { useHistory, useParams } from 'react-router-dom';
-import { CheckCircleFill } from 'react-bootstrap-icons';
-import UserContext from './UserContext';    
+import { CheckCircleFill, ArrowLeftCircle } from 'react-bootstrap-icons';
+import UserContext from './UserContext'; 
+import "../styles/backbutton.css";
 const Task = (props) => {
     const { id, taskid } = useParams();
 
@@ -33,6 +34,9 @@ const Task = (props) => {
 
         return (
             <div>
+                <div className= "backBut" onClick={() =>  history.goBack()}>
+                    <span className="text"><ArrowLeftCircle style={{ fontSize: 24, marginRight: 10 }}/>Go Back</span>
+                </div>
                 <div className="card bg-light border-primary text-left">
                     <div className="card-header">Task: {id}</div>
                     <div className="card-body">
